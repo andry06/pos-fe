@@ -1,0 +1,1 @@
+export const CHECKLIST_ITEM = 'CHECKLIST_ITEM'

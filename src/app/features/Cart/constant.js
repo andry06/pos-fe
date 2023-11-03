@@ -1,0 +1,4 @@
+export const ADD_ITEM = 'ADD_ITEM' // AND INCREMENT
+export const DECREMENT_ITEM = 'DECREMENT_ITEM'
+export const CLEAR_ITEM = 'CLEAR_ITEM'
+export const REFRESH_ITEM = 'REFRESH_ITEM'
