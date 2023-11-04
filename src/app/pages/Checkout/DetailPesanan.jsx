@@ -1,5 +1,6 @@
 import { Button, Card, Col, Image, Row, Table } from "react-bootstrap";
 import { rupiahFormat } from "../../capitalize";
+import * as config from '../../config';
 
 const DetailPesanan = ({dataFilterId, dataCart, subTotal, dataSelect, handleBefore, handleBayar}) => {
     return (
@@ -32,7 +33,7 @@ const DetailPesanan = ({dataFilterId, dataCart, subTotal, dataSelect, handleBefo
             <tbody>
             {dataCart.map((data, i) => (
                <tr key={i}>
-                    <td><Image src={`http://localhost:3000/public/images/products/${data.image_url}`} width={80} height={70} rounded /></td>
+                    <td><Image src={`${config.urlAPI}/public/images/products/${data.image_url}`} width={80} height={70} rounded /></td>
                     <td className="align-middle">{data.name}</td>
                     <td className="align-middle ">{rupiahFormat(data.price)}</td>
                     <td className="align-middle">

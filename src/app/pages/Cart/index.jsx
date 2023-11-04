@@ -10,7 +10,7 @@ import { rupiahFormat } from "../../capitalize";
 import { useNavigate } from "react-router-dom";
 import SweetAlert2 from "react-sweetalert2";
 import { actChecklistItem } from "../../features/Checkout/actions";
-
+import * as config from '../../config';
 
  const CartPage = () => {
     const dispatch = useDispatch();
@@ -170,7 +170,7 @@ import { actChecklistItem } from "../../features/Checkout/actions";
                             {dataCart.map((data, i) => (
                                <tr key={i}>
                                     <td><input type="checkbox" name="product" value={data.product._id} id={data.product._id} checked={idProduct.includes(data.product._id)} onClick={handleChangeCheckbox} readOnly/></td>
-                                    <td><Image src={`http://localhost:3000/public/images/products/${data.image_url}`} width={80} height={70} rounded /></td>
+                                    <td><Image src={`${config.urlAPI}/public/images/products/${data.image_url}`} width={80} height={70} rounded /></td>
                                     <td className="align-middle">{data.name}</td>
                                     <td className="align-middle ">{rupiahFormat(data.price)}</td>
                                     <td className="align-middle">

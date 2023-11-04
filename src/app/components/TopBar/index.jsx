@@ -79,7 +79,7 @@ const TopBar = () => {
     return(
         <Navbar bg="primary" className='mb-4 fixed-top pt-2 pb-2' >
             <Container >
-                <Navbar.Brand className="text-white"><Link to="/" className='text-white text-decoration-none'>SEJAM CAFE</Link></Navbar.Brand>
+                <Navbar.Brand className="text-white"><Link to="/" className='text-white text-decoration-none d-none d-md-block'>SEJAM CAFE</Link></Navbar.Brand>
                 <Nav className="me-3" style={{ width: '60px' }} >
                     <NavDropdown title={product.category ? capitalizeFirst(product.category) : 'Kategori'} >
                             <NavDropdown.Item onClick={(e) => handleCategory('')}>Semua Kategory</NavDropdown.Item>

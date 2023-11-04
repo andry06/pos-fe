@@ -109,7 +109,7 @@ const HomePage = () => {
         <div>
             
             <Container  className="text-start" style={{minHeight: '392px' ,marginBottom: '100px', marginTop: '70px' }}>
-
+            <h1 className="text-center text-primary d-sm-block d-md-none">SEJAM CAFE</h1>
             <span className="text-muted">Kategori Terpilih : { produk.category ? capitalizeFirst(produk.category) : 'Semua'}</span>
                 <Card className="mt-2 border-primary">
                     <Card.Body>
