@@ -1,2 +1,2 @@
 
-export const urlAPI = 'https://pos-server.cyclic.app/';
+export const urlAPI = 'https://posserver.cyclic.app';
