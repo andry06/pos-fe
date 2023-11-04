@@ -2,13 +2,14 @@ import { Badge, Button, Card } from "react-bootstrap";
 import { capitalizeFirst, rupiahFormat } from "../../capitalize";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as config from '../../config';
 
 const CardProduct = ({data, AddToCart}) => {
 
 
     return (
             <Card className="mt-4" style={{ minHeight: '420px' }}>
-                <Card.Img variant="top" src={`http://localhost:3000/public/images/products/${data.image_url}`} height={175}/>
+                <Card.Img variant="top" src={`${config.urlAPI}/public/images/products/${data.image_url}`} height={175}/>
                 <Card.Body>
                     <Card.Title className="text-center h6">{data.name}</Card.Title>
                     <Badge bg="primary mb-2">Kategori: {capitalizeFirst(data.category.name)}</Badge>
