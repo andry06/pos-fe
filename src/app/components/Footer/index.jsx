@@ -3,7 +3,7 @@ const Footer = () => {
      }
     return(
         <footer style={{ style }} className="bg-primary text-white pb-2 pt-2 ">
-        <div className="align-middle">Created By <a href="#home" className="text-white text-decoration-none fw-bold">Andri Suryono</a></div>
+        <div className="align-middle"><a href="/" className="text-white text-decoration-none fw-bold"> SEJAM CAFE </a>- Created By <a href="https://andrisuryono.vercel.app/" className="text-white text-decoration-none fw-bold">Andri Suryono</a></div>
     </footer>
     )
 }

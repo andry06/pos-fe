@@ -1,6 +1,6 @@
 import { Button, Container, Form, InputGroup, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import "./index.css";
-import { faSearch, faCartShopping,faUser } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faCartShopping,faUser, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -79,7 +79,7 @@ const TopBar = () => {
     return(
         <Navbar bg="primary" className='mb-4 fixed-top pt-2 pb-2' >
             <Container >
-                <Navbar.Brand className="text-white"><Link to="/" className='text-white text-decoration-none d-none d-md-block'>SEJAM CAFE</Link></Navbar.Brand>
+                <Navbar.Brand className="text-white"><Link to="/" className='text-white text-decoration-none'><span className='d-none d-md-block'>SEJAM CAFE</span>   <FontAwesomeIcon icon={faHome} className='text-white y d-sm-block d-md-none ms-2' /></Link></Navbar.Brand>
                 <Nav className="me-3" style={{ width: '60px' }} >
                     <NavDropdown title={product.category ? capitalizeFirst(product.category) : 'Kategori'} >
                             <NavDropdown.Item onClick={(e) => handleCategory('')}>Semua Kategory</NavDropdown.Item>

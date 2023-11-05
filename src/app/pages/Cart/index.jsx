@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Button, Card, Col, Container, Form, Image, Row, Table } from "react-bootstrap";
+import { Button, Card, Col, Container, Image, Row, Table } from "react-bootstrap";
 import { apiDeleteCart, apiGetCart, apiSaveCart } from "../../api/cart";
 import { useDispatch, useSelector } from "react-redux";
 import { actAddItem, actClearItem, actDecItem } from "../../features/Cart/actions";
@@ -26,7 +26,7 @@ import * as config from '../../config';
     const [swalConfirm, setSwalConfirm] = useState({});
     const [isCheckAll, setIsCheckAll] = useState(false);
     const [idProduct, setIdProduct] = useState([]);
-
+   
     
 
     useEffect(() => {  
@@ -124,7 +124,7 @@ import * as config from '../../config';
         if (!checked) {
           setIdProduct(idProduct.filter(item => item !== value));
         }
-    
+
     };
 
     const handleSelectAll = e => {
